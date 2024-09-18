@@ -13,6 +13,15 @@ app.use(function(req,res,next){
     next()
 })
 
+app.use(function(req,res,next){
+    if(req.query.login=='jeff@gmail.com'){
+        console.log('logueado')
+        next()
+    }
+    else{
+        res.send('no logueado')
+        }
+})
 
 app.get('/profile',function(req,res){
     res.send('visit route profile')
