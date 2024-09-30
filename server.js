@@ -1,14 +1,22 @@
 const express = require('express')
-const morgan =require('morgan')
 
 const app = express()
 //GET ENVIRONMENT VARIABLE 
-const puerto= process.env.PORT
 
-app.listen(puerto,function(){
+app.listen(3000,function(){
     console.log("sever on")
 })
 
-app.get('/jeff',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send("ruta inicial")
+})
+
+app.get('/jeff/',(req,res)=>{
+    if(req.query.zapatilla=="jordan" & req.query.gorra=="nike") {
+        res.send("ropas encontradas")
+    }    
+    else{
+        res.send("no tiene queris")
+    }
+    
 })

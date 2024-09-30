@@ -10,7 +10,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "jeff":"nodemon server.js"
+    "dev":"nodemon server.js"
   },
   "keywords": [],
   "author": "",
