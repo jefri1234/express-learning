@@ -20,3 +20,7 @@ app.get('/jeff/',(req,res)=>{
     }
     
 })
+
+app.get('/params/:id',function(req,res){
+    res.send("ruta con paramtros")
+})
